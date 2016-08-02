@@ -1,0 +1,136 @@
+! Xcursor                   {{{
+    Xcursor.theme:  Vanilla-DMZ
+    Xcursor.size:   16
+!                           }}}
+! xTerm                     {{{
+    xterm*termName: xterm-256color
+    xterm*utf8: true
+    xterm*locale: true
+    xterm*utf8Title: true
+    xterm*renderFont: true
+    xterm*scaleHeight: 1.1
+    xterm*preeditType: Root
+    xterm*xftAntialias: true
+    xterm*faceName: DejaVu Sans Mono:pixelsize=14
+    xterm*faceNameDoublesize: WenQuanYi Zen Hei Mono:pixelsize=14
+    xterm*customization: -color
+    xterm*scrollbar: yes
+    xterm*background: black
+    xterm*foreground: grey
+
+    ! fix alt-key inputting
+    xterm*eightBitInput: false
+    xterm*metaSendsEscape: true
+    xterm*inputMethod: fcitx
+
+    ! copy and paste with clipboard
+    xterm*translations: #override \
+            Ctrl Shift <KeyPress> C: copy-selection(CLIPBOARD) \n\
+            Ctrl Shift <KeyPress> V: insert-selection(CLIPBOARD)
+!                           }}}
+!aterm                      {{{
+    aterm*termName: xterm-256color
+    aterm.inputMethod: fcitx
+    aterm*font: *-*-fixed-medium-r-normal--*-140-*-*-*-*-iso8859-1
+    aterm*boldFont:*-*-fixed-bold-r-normal--*-*-140-*-*-*-*-iso8859-1
+    aterm*mfont: kc15f
+    aterm*transparent: true
+    aterm*transpscrollbar: true
+    aterm*shading: 60
+!                           }}}
+! URxvt   {{{
+    ! General
+        URxvt*.termName: rxvt
+        URxvt*.inputMethod: fcitx
+        !这个会造成启动缓慢，但如果不启用，会造成没法输入中文
+        !URxvt*.multichar_encoding:UTF-8
+        URxvt*.imLocale: zh_CN.UTF-8
+        URxvt*.meta8: True
+        URxvt*.iso14755: False
+    ! font
+        !URxvt*.font:xft:Monaco:pixelsize=10,xft:WenQuanYi Micro Hei:pixelsize=15
+        ! URxvt*.font:xft:DejaVu Sans Mono:pixelsize=15,xft:WenQuanYi Micro Hei:pixelsize=18
+        URxvt*.font:xft:DejaVu\ Sans\ Mono\ for\ Powerline:pixelsize=16,xft:WenQuanYi\ Micro\ Hei\ for\ Powerline:pixelsize=18
+        ! URxvt*.font:xft:Consolas\ for\ Powerline:pixelsize=18,xft: Consolas\ for\ Powerline:pixelsize=18
+        ! urxvt*font: xft:Terminus:pixelsize=15,xft:Inconsolata\ for\ Powerline:pixelsize=15
+        ! Extensions
+        URxvt*.perl-lib:        /usr/lib/urxvt/perl/
+        URxvt*.perl-ext-common: default,clipboard,url-select,keyboard-select,tabbed,matcher
+        !URxvt*.cursorBlink: True
+        URxvt*.pointerBlink: True
+    ! copy and paste
+        URxvt*.keysym.C-S-C: perl:clipboard:copy
+        URxvt*.keysym.C-S-V: perl:clipboard:paste
+        URxvt*.clipboard.copycmd:  xsel -ib
+        URxvt*.clipboard.pastecmd: xsel -ob
+        !URxvt*.clipboard.copycmd:  xclip -if
+        !URxvt*.clipboard.pastecmd: xclip -of
+    ! follow URL
+        URxvt*.matcher.button:1
+        URxvt*.url-select.underline: true
+        URxvt*.colorUL: #4682B4
+        URxvt*.url-select.launcher: firefox -new-tab
+        URxvt*.keysym.C-S-N: perl:url-select:select_next
+        URxvt*.keysym.C-S-A: perl:keyboard-select:activate
+        URxvt*.keysym.C-S-question: perl:keyboard-select:search
+        !URxvt*.cutchars: BACKSLASH `"'&(),;<=>?@[]^{|}
+    ! color
+        URxvt*.foreground:#FFFFFF
+        URxvt*.background:#2E3436
+        URxvt*.color0:#2E3436
+        URxvt*.color1:#CC0000
+        URxvt*.color2:#4E9A06
+        URxvt*.color3:#C4A000
+        URxvt*.color4:#3465A4
+        URxvt*.color5:#75507B
+        URxvt*.color6:#06989A
+        URxvt*.color7:#D3D7CF
+        URxvt*.color8:#555753
+        URxvt*.color9:#EF2929
+        URxvt*.color10:#8AE234
+        URxvt*.color11:#FCE94F
+        URxvt*.color12:#729FCF
+        URxvt*.color13:#AD7FA8
+        URxvt*.color14:#34E2E2
+        URxvt*.color15:#EEEEEC
+    ! scrollbar
+        URxvt*.scrollBar: True
+        !URxvt*.secondaryScroll: True
+        URxvt*.scrollBar_right: True
+        URxvt*.scrollBar_floating: True
+        URxvt*.scrollstyle: plain
+        URxvt*.saveLines: 65535
+	!tabs 
+	! Tab set
+	!URxvt.tabbed.tab-fg: 12
+	!URxvt.tabbed.tab-bg: 0
+	!URxvt.tabbed.tabbar-fg: 4  
+	URxvt.tabbed.tabbar-fg:12
+	URxvt.tabbed.tabbar-bg:0
+	URxvt.tabbed.tab-fg:3
+	URxvt.tabbed.tab-bg:8   
+
+
+	!默认支持鼠标点击使用，快捷键如下：  
+	!Shift+ ↓ new tab  
+	!Shift+ ← go to left tab  
+	!Shift+ → go to right tab  
+	!Ctrl+ ← move tab to the left  
+	!Ctrl+ → move tab to the right  
+	!Ctrl+D: close tab  
+
+    ! transpartent
+        URxvt*.inheritPixmap: true
+        URxvt*.depth: 32
+        URxvt*.transparent: true
+        URxvt*.shading: 30
+    ! other
+        ! Rxvt.preditType:Root
+        ! URxvt*.perl-ext-common: default,tabbed
+        ! URxvt*.tabbed.tabbar-fg: #FFFFFF
+        ! URxvt*.tabbed.tabbar-bg: rgba:1111/1111/1111/9999
+        ! URxvt*.tabbed.tag-fg: 0
+        ! URxvt*.tabbed.tab-bg: rgba:1111/1111/1111/9999
+! }}}
+!
+! vim: sw=4 smarttab
