@@ -7,3 +7,8 @@ C-f C-b 切换buf和目录
 C-d search file ignore dir  
 C-j C-k  C-z打开多个文件
 :30 goto 30 line 
+
+
+"--------------------
+"按键设置
+"--------------------
