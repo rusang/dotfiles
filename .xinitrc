@@ -29,6 +29,7 @@ sh  ~/.autostart/feh.sh &  #设置壁纸
 xss-lock -- i3lock -i ~/.wallpaper/a32.png  --insidevercolor=0000a0bf --insidewrongcolor=ff8000bf --insidecolor=ffffffbf --ringvercolor=0020ffff --ringwrongcolor=4040ffff --ringcolor=404090ff --textcolor=ffffffff --linecolor=aaaaaaff --keyhlcolor=30ccccff --bshlcolor=ff8000ff  &
 # xss-lock -- lock &
 xbindkeys &
+# tilda &
 #sysctl -w kernel.core_pattern=/var/log/corefiles/%e.core.%p
 exec i3
 

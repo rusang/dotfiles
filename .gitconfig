@@ -11,10 +11,10 @@
 	diff = auto
 [core]
 	editor = vim
-#    gitproxy=/home/ssliao/.script/git_accelerate/gitproxy.sh
+    gitproxy=/home/ssliao/.script/git_accelerate/gitproxy.sh
 
 [http]
-#    proxy=socks5://127.0.0.1:9050
+    proxy=socks5://127.0.0.1:9050
 
 [merge]
 	tool = vimdiff
